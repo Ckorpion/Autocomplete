@@ -1,0 +1,111 @@
+@import './../fonts/Poppins/Poppins.css';
+
+:root {
+	--appmaxwidth: 1000px;
+}
+
+.-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+.-flex__xCenter {
+	justify-content: center;
+}
+.-flex__yCenter {
+	align-items: center;
+}
+.-flex__xSpace {
+	justify-content: space-between;
+}
+
+.-cur {
+	cursor: pointer;
+}
+
+html,
+body,
+#app {
+	height: 100%;
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 21px;
+	color: #000000;
+	overflow-y: scroll;
+}
+
+a {
+	text-decoration: none;
+	color: initial;
+	transition: .1s linear;
+}
+a:hover{ 
+	opacity: 0.4;
+}
+
+.button-white,
+.button-blue {
+	position: relative;
+	height: 50px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 27px;
+	cursor: pointer;
+	border-radius: 12px;
+	border: none;
+	overflow: hidden;
+	z-index: 0;
+}
+.button-white::before,
+.button-blue::before,
+.button-white::after,
+.button-blue::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: -1;
+	transition: .1s linear;
+}
+.button-white::before {
+	background: #F2F2F2;
+}
+.button-blue {
+	color: #FFFFFF;
+}
+.button-blue::before {
+	background: #5551FF;
+}
+.button-white::after,
+.button-blue::after {
+	opacity: 0;
+}
+.button-white::after {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), #F2F2F2;
+}
+.button-blue::after {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #5551FF;
+}
+.button-white:hover::after,
+.button-blue:hover::after {
+	opacity: 1;
+}
