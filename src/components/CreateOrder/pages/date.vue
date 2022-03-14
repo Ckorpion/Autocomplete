@@ -193,6 +193,7 @@
 		.calendar__dayweeks,
 		.calendar__days  {
 			grid-template-columns: repeat(7, 50px);
+			grid-gap: 2px 0;
 		}
 
 		.calendar__dayweeks__item,
@@ -213,6 +214,7 @@
 		.calendar__dayweeks,
 		.calendar__days  {
 			grid-template-columns: repeat(7, 36px);
+			grid-gap: 12px 0;
 		}
 
 		.calendar__dayweeks__item,
