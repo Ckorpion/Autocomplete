@@ -47,7 +47,7 @@
 
 	.inputfield__input {
 		width: 100%;
-		padding: 13px 13px 13px 14px;
+		padding: 13px 50px 13px 14px;
 		box-sizing: border-box;
 
 		background: rgba(0, 0, 0, 0.05);
