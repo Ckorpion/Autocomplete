@@ -19,7 +19,7 @@
 	for (let id = 0; id < json.length; id++) {
 		json_list[id] = {id, value: json[id]};
 	}
-	json_list.sort((a, b) => a.length - b.length);
+	json_list.sort((a, b) => a.value.length - b.value.length);
 
 	let json_first = [].concat(json_list);
 	json_first = json_first.slice(0, 10);
@@ -58,6 +58,8 @@
 
 		list = list.filter((v, i, a) => a.indexOf(v) === i);
 		list.sort((a, b) => a.word.length - b.word.length);
+		list = list.slice(0, 15);
+
 
 		return list;
 	});
