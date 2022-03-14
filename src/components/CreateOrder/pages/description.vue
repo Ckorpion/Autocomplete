@@ -1,7 +1,7 @@
 <script setup>
 	import { ref, computed, watchEffect } from 'vue'
 
-	import json_list from './../../../assets/js/list.json'
+	import json_list from './../../../assets/list.json'
 
 	import InputField from './../../all/InputField.vue'
 	import Icons from './../../all/Icons.vue'
@@ -21,10 +21,13 @@
 	json_first = json_first.slice(0, 10);
 	json_first = json_first.map(item => ({word: item, phrase: item}));
 
+	const refInput = ref(null)
+
 
 	// METHODS
 	const select = (item) => {
-		value.value = item.phrase;
+		value.value = item.phrase + ' ';
+		refInput.value.setFocus();
 	};
 
 
@@ -64,7 +67,7 @@
 <template>
 	<div class="description -flex">
 		<div class="description-box">
-			<InputField v-model="value" class="input" />
+			<InputField ref="refInput" v-model="value" class="input" />
 
 			<div class="options -flex">
 				<div v-for="item in options" class="option -cur" @click="select(item)">{{ item.word }}</div>

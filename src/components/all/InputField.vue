@@ -1,4 +1,6 @@
 <script setup>
+	import { ref } from 'vue'
+
 	import Icons from './Icons.vue'
 
 	defineProps({
@@ -9,6 +11,12 @@
 
 	const emit = defineEmits(['update:modelValue']);
 
+
+	// DATA
+	const refInput = ref(null)
+
+
+	// METHODS
 	const input = (event) => {
 		updateValue(event.target.value);
 	}
@@ -20,11 +28,19 @@
 	const clear = () => {
 		updateValue('');
 	}
+
+	const setFocus = () => {
+		refInput.value.focus()
+	}
+
+	defineExpose({
+		setFocus
+	})
 </script>
 
 <template>
 	<div class="inputfield">
-		<input type="text" :value="modelValue" class="inputfield__input" @input="input" />
+		<input ref="refInput" type="text" :value="modelValue" class="inputfield__input" @input="input" />
 
 		<Icons 
 			name="Cross circle" 
