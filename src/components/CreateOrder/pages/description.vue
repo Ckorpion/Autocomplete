@@ -70,7 +70,7 @@
 			<InputField ref="refInput" v-model="value" class="input" />
 
 			<div class="options -flex">
-				<div v-for="item in options" class="option -cur" @click="select(item)">{{ item.word }}</div>
+				<div v-for="(item, i) in options" :key="'word' + i" class="option -cur" @click="select(item)">{{ item.word }}</div>
 			</div>
 		</div>
 
