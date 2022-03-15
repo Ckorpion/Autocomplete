@@ -193,12 +193,16 @@
 		.calendar__dayweeks,
 		.calendar__days  {
 			grid-template-columns: repeat(7, 50px);
-			grid-gap: 2px 0;
+		}
+
+		.calendar__days {
+			margin-bottom: -2px;
 		}
 
 		.calendar__dayweeks__item,
 		.calendar__days__item  {
 			padding: 12px 0;
+			margin-bottom: 2px;
 		}
 	}
 
@@ -214,12 +218,16 @@
 		.calendar__dayweeks,
 		.calendar__days  {
 			grid-template-columns: repeat(7, 36px);
-			grid-gap: 12px 0;
+		}
+
+		.calendar__days {
+			margin-bottom: -12px;
 		}
 
 		.calendar__dayweeks__item,
 		.calendar__days__item  {
 			padding: 5px 0;
+			margin-bottom: 12px;
 		}
 	}
 </style>

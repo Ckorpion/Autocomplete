@@ -122,7 +122,11 @@
 		}
 
 		.options {
-			gap: 12px;
+			margin: 0 -12px -12px 0;
+		}
+
+		.option {
+			margin: 0 12px 12px 0;
 		}
 	}
 
@@ -132,7 +136,10 @@
 		}
 
 		.options {
-			gap: 10px;
+			margin: 0 -10px -10px 0;
+		}
+		.option {
+			margin: 0 10px 10px 0;
 		}
 	}
 </style>
